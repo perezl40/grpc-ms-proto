@@ -1,4 +1,5 @@
-syntax = proto3;
+// proto/auth.proto
+syntax = "proto3";
 
 package auth;
 
@@ -14,11 +15,11 @@ message CcmsLoginRequest {
 }
 
 message CcmsLoginResponse {
-    int32 idccms =  1;
-    string username =  2;
-    string name =  3;
-    string charge =  4;
-    string rol =  5;
-    string photo =  6;
-    string token =  7;
+  int32 idccms =  1;
+  string username =  2;
+  string name =  3;
+  string charge =  4;
+  string rol =  5;
+  string photo =  6;
+  string token =  7;
 }

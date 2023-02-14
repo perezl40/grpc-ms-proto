@@ -4,17 +4,17 @@ syntax = "proto3";
 package auth;
 
 service AuthService {
-  rpc CcmsLogin (CcmsLoginRequest) returns (CcmsLoginResponse) {}
+  rpc CCMSLogin (CCMSLoginRequest) returns (CCMSLoginResponse) {}
 }
 
 
-// CcmsLogin
-message CcmsLoginRequest {
+// CCMSLogin
+message CCMSLoginRequest {
   string accessToken = 1;
   optional string username = 2;
 }
 
-message CcmsLoginResponse {
+message CCMSLoginResponse {
   optional int32 idccms =  1;
   optional string username =  2;
   optional string name =  3;

@@ -11,15 +11,15 @@ service AuthService {
 // CcmsLogin
 message CcmsLoginRequest {
   string accessToken = 1;
-  string username = 2;
+  optional string username = 2;
 }
 
 message CcmsLoginResponse {
-  int32 idccms =  1;
-  string username =  2;
-  string name =  3;
-  string charge =  4;
-  string rol =  5;
-  string photo =  6;
-  string token =  7;
+  optional int32 idccms =  1;
+  optional string username =  2;
+  optional string name =  3;
+  optional string charge =  4;
+  optional string rol =  5;
+  optional string photo =  6;
+  optional string token =  7;
 }

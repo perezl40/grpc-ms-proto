@@ -1,8 +1,6 @@
 // proto/auth.proto
 syntax = "proto3";
 
-// como importar el archivo error_details.proto
-import "proto/error_details.proto";
 
 package auth;
 
@@ -30,4 +28,9 @@ message bodyResponse {
   optional string rol =  5;
   optional string photo =  6;
   optional string token =  7;
+}
+
+message ErrorDetails {
+  repeated string error = 1;
+  string code = 2;
 }

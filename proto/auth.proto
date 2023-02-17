@@ -1,6 +1,9 @@
 // proto/auth.proto
 syntax = "proto3";
 
+// como importar el archivo error_details.proto
+import "proto/error_details.proto";
+
 package auth;
 
 service AuthService {
@@ -16,7 +19,7 @@ message CcmsLoginRequest {
 
 message CcmsLoginResponse {
   bodyResponse data  =1;
-  repeated string error = 2;
+  repeated ErrorDetails error = 2;
 }
 
 message bodyResponse {

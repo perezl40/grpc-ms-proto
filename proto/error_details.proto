@@ -1,0 +1,6 @@
+syntax = "proto3";
+
+message ErrorDetails {
+  repeated string error = 1;
+  string code = 2;
+}

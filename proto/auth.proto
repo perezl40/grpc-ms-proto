@@ -15,6 +15,11 @@ message CcmsLoginRequest {
 }
 
 message CcmsLoginResponse {
+  bodyResponse data  =1;
+  repeated string error = 2;
+}
+
+message bodyResponse {
   optional int32 idccms =  1;
   optional string username =  2;
   optional string name =  3;

@@ -16,7 +16,7 @@ message CcmsLoginRequest {
 }
 
 message CcmsLoginResponse {
-  bodyResponse data  =1;
+  optional bodyResponse data  =1;
   repeated ErrorDetails error = 2;
 }
 

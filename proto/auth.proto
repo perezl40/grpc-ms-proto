@@ -6,6 +6,7 @@ package auth;
 
 service AuthService {
   rpc CcmsLogin (CcmsLoginRequest) returns (CcmsLoginResponse) {}
+  rpc ValidateToken (ValidateTokenRequest) returns (ValidateTokenResponse) {}
 }
 
 
@@ -25,3 +26,11 @@ message CcmsLoginResponse {
   optional string token =  7;
 }
 
+message ValidateTokenRequest{
+  string token = 1;
+}
+message ValidateTokenResponse{
+  bool auth = 1;
+}
+
+ 

@@ -16,11 +16,6 @@ message CcmsLoginRequest {
 }
 
 message CcmsLoginResponse {
-  optional bodyResponse data  =1;
-  repeated ErrorDetails error = 2;
-}
-
-message bodyResponse {
   optional int32 idccms =  1;
   optional string username =  2;
   optional string name =  3;
@@ -30,7 +25,3 @@ message bodyResponse {
   optional string token =  7;
 }
 
-message ErrorDetails {
-  repeated string error = 1;
-  string code = 2;
-}

@@ -6,6 +6,7 @@ package auth;
 
 service AuthService {
   rpc CcmsLogin (CcmsLoginRequest) returns (CcmsLoginResponse) {}
+  rpc ValidateToken (ValidateTokenRequest) returns (ValidateTokenResponse) {}
 }
 
 
@@ -37,4 +38,12 @@ message CampaignsResponse {
   optional string powerBiURL =  4;
   optional string reportPowerBi =  5;
   optional string market =  6;
+}
+
+message ValidateTokenRequest{
+  string token = 1;
+}
+
+message ValidateTokenResponse{
+  bool auth = 1;
 }

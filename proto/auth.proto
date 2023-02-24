@@ -16,6 +16,11 @@ message CcmsLoginRequest {
 }
 
 message CcmsLoginResponse {
+  LoginResponse login = 1;
+  CampaignsResponse campaigns = 2;
+}
+
+message LoginResponse {
   optional int32 idccms =  1;
   optional string username =  2;
   optional string name =  3;
@@ -25,3 +30,11 @@ message CcmsLoginResponse {
   optional string token =  7;
 }
 
+message CampaignsResponse {
+  optional int32 id =  1;
+  optional string campaign =  2;
+  optional string powerBiName =  3;
+  optional string powerBiURL =  4;
+  optional string reportPowerBi =  5;
+  optional string market =  6;
+}

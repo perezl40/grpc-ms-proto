@@ -37,7 +37,6 @@ message CampaignsResponse {
   optional string powerBiName =  3;
   optional string powerBiURL =  4;
   optional string reportPowerBi =  5;
-  optional string market =  6;
 }
 
 message ValidateTokenRequest{

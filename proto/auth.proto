@@ -18,7 +18,7 @@ message CcmsLoginRequest {
 
 message CcmsLoginResponse {
   LoginResponse login = 1;
-  CampaignsResponse campaigns = 2;
+  CampaignsResponse[] campaigns = 2;
 }
 
 message LoginResponse {

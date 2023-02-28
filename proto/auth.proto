@@ -17,11 +17,11 @@ message CcmsLoginRequest {
 }
 
 message CcmsLoginResponse {
-  LoginResponse login = 1;
-  repeated CampaignsResponse campaigns = 2;
+  Login login = 1;
+  repeated Campaign campaigns = 2;
 }
 
-message LoginResponse {
+message Login {
   optional int32 idccms =  1;
   optional string username =  2;
   optional string name =  3;
@@ -31,7 +31,7 @@ message LoginResponse {
   optional string token =  7;
 }
 
-message CampaignsResponse {
+message Campaign {
   optional int32 id =  1;
   optional string campaign =  2;
   optional string powerBiName =  3;

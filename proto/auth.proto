@@ -1,7 +1,6 @@
 // proto/auth.proto
 syntax = "proto3";
 
-
 package auth;
 
 service AuthService {
@@ -9,18 +8,7 @@ service AuthService {
   rpc ValidateToken (ValidateTokenRequest) returns (ValidateTokenResponse) {}
 }
 
-
 // CcmsLogin
-message CcmsLoginRequest {
-  string accessToken = 1;
-  optional string username = 2;
-}
-
-message CcmsLoginResponse {
-  Login login = 1;
-  repeated Campaign campaigns = 2;
-}
-
 message Login {
   optional int32 idccms =  1;
   optional string username =  2;
@@ -38,7 +26,17 @@ message Campaign {
   optional string powerBiURL =  4;
   optional string reportPowerBi =  5;
 }
+message CcmsLoginRequest {
+  string accessToken = 1;
+  optional string username = 2;
+}
 
+message CcmsLoginResponse {
+  Login login = 1;
+  repeated Campaign campaigns = 2;
+}
+
+// Validate Token 
 message ValidateTokenRequest{
   string token = 1;
 }
